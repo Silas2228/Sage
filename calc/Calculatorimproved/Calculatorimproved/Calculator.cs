@@ -42,8 +42,6 @@ namespace Calculatorimproved
                 default:
                     break;
             }
-            
-            operationp = false;
             return result;
         }
     }

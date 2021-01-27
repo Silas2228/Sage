@@ -29,7 +29,7 @@ namespace Calculatorimproved
             {
                 Input_txt.Clear();
             }
-
+            _calculator.operationp = false;
             Button b = sender as Button;
             Input_txt.Text += b.Content as string;
         }
@@ -44,8 +44,8 @@ namespace Calculatorimproved
             {
                 Button b = (Button)sender;
                 _calculator.operationp = true;
+              
                 FullInput_txt.Text = _calculator.Get(b.Content as string, Convert.ToDouble(Input_txt.Text));
-                
             }
             catch(Exception ex)
             {
@@ -57,9 +57,8 @@ namespace Calculatorimproved
         {
             try
             {
-                FullInput_txt.Text += Input_txt.Text;
+                Input_txt.Text = _calculator.Calc(Input_txt.Text);   
                 FullInput_txt.Clear();
-                Input_txt.Text = _calculator.Calc(Input_txt.Text);
             }
             catch (Exception ex)
             {
