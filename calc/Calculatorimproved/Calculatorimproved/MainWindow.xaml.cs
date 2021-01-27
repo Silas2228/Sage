@@ -15,14 +15,73 @@ using System.Windows.Shapes;
 
 namespace Calculatorimproved
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+        Calculator _calculator = new Calculator();
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void button_click(object sender, RoutedEventArgs e)
+        {
+            if(Input_txt.Text == "0" || _calculator.operationp == true)
+            {
+                Input_txt.Clear();
+            }
+
+            Button b = sender as Button;
+            Input_txt.Text += b.Content as string;
+        }
+
+        private void Delete_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Input_txt.Text = "0";
+        }
+        private void Operator_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Button b = (Button)sender;
+                _calculator.operationp = true;
+                FullInput_txt.Text = _calculator.Get(b.Content as string, Convert.ToDouble(Input_txt.Text));
+                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+        }
+        private void Equals_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                FullInput_txt.Text += Input_txt.Text;
+                FullInput_txt.Clear();
+                Input_txt.Text = _calculator.Calc(Input_txt.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void Remove_Last_Click(object sender, RoutedEventArgs e)
+        {
+            
+            string input = Input_txt.Text;
+            if(input == "0" || input.Length == 1)
+            {
+                input = "";
+            }
+            else
+            {
+                input = input.Remove(input.Length - 1);  
+            }
+
+            Input_txt.Text = input;
+
         }
     }
 }
