@@ -7,7 +7,7 @@ using System.Windows.Controls;
 
 namespace Calculatorimproved
 {
-    class CalculatorViewModel
+    public class CalculatorViewModel
     {
         internal bool operationp = false;
         string result;
@@ -15,29 +15,28 @@ namespace Calculatorimproved
         double _value = 0;
         string _fullinput;
 
-        public string Get(string op, double vl)
+        public string Get(string operation, double value)
         {
-            _operators = op;
-            _value = vl;
+            _operators = operation;
+            _value = value;
             _fullinput = _value + " " + _operators; 
             return _fullinput;
         }
-        public string Calc(string vl)
+        public string Calc(string value2)
         {
-            
             switch (_operators)
             {
                 case "+":
-                    result = (_value + double.Parse(vl)).ToString();
+                    result = (_value + double.Parse(value2)).ToString();
                     break;
                 case "-":
-                    result = (_value - double.Parse(vl)).ToString();
+                    result = (_value - double.Parse(value2)).ToString();
                     break;
                 case "/":
-                    result = (_value / double.Parse(vl)).ToString();
+                    result = (_value / double.Parse(value2)).ToString();
                     break;
                 case "*":
-                    result = (_value * double.Parse(vl)).ToString();
+                    result = (_value * double.Parse(value2)).ToString();
                     break;
                 default:
                     break;
