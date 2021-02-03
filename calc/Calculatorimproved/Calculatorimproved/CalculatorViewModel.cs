@@ -7,7 +7,7 @@ using System.Windows.Controls;
 
 namespace Calculatorimproved
 {
-    class Calculator
+    class CalculatorViewModel
     {
         internal bool operationp = false;
         string result;
@@ -43,6 +43,22 @@ namespace Calculatorimproved
                     break;
             }
             return result;
+        }
+        public string RemoveLastChar(string input)
+        {
+            if (input == "0" || input.Length == 1)
+            {
+                input = "";
+            }
+            else
+            {
+                input = input.Remove(input.Length - 1);
+            }
+            return input;
+        }
+        public string Delete()
+        {
+            return "0";
         }
     }
 }

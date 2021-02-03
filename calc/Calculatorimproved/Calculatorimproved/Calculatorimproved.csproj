@@ -70,7 +70,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="mainwindow.xaml">
+    <Page Include="CalcuatorView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -78,9 +78,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Calculator.cs" />
-    <Compile Include="mainwindow.xaml.cs">
-      <DependentUpon>mainwindow.xaml</DependentUpon>
+    <Compile Include="CalculatorViewmodel.cs" />
+    <Compile Include="CalcuatorView.xaml.cs">
+      <DependentUpon>CalcuatorView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\41762\Documents\Git\Projects\Sage\calc\Calculatorimproved\Calculatorimproved\obj\Debug\
+C:\git\SageProjects\Sage\calc\Calculatorimproved\Calculatorimproved\obj\Debug\
 Calculatorimproved
 none
 false
 DEBUG;TRACE
-C:\Users\41762\Documents\Git\Projects\Sage\calc\Calculatorimproved\Calculatorimproved\App.xaml
-11150301917
+C:\git\SageProjects\Sage\calc\Calculatorimproved\Calculatorimproved\App.xaml
+11992062677
 
-7-1636778703
+7235438890
 13-1505183044
-mainwindow.xaml;
+CalcuatorView.xaml;
 
 True
 
