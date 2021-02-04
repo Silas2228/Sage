@@ -8,27 +8,27 @@
         Title="MainWindow" Height="450" Width="436.566">
     <Grid Background="#181818" RenderTransformOrigin="0.597,0.497" Margin="-10,0,-8,0">
         <!-- Button -->
-        <Button x:Name="One_btn" Content="1" Margin="10,327,0,0" Click="button_click" />
-        <Button x:Name="Two_btn" Content="2"  Margin="95,327,0,0" Click="button_click" />
-        <Button x:Name="Three_btn" Content="3" Margin="180,326,0,0" Click="button_click" />
-        <Button x:Name="Four_btn" Content="4"  Margin="10,282,0,0" Click="button_click" />
-        <Button x:Name="Five_btn" Content="5" Margin="95,282,0,0" Click="button_click" />
-        <Button x:Name="Six_btn" Content="6" Margin="180,281,0,0" Click="button_click" />
-        <Button x:Name="Seven_btn" Content="7" Margin="10,236,0,0" Click="button_click" />
-        <Button x:Name="Eight_btn" Content="8" Margin="95,236,0,0" Click="button_click" />
-        <Button x:Name="Nine_btn" Content="9" Margin="180,236,0,0" Click="button_click" />
-        <Button x:Name="Zero_btn" Content="0" Margin="95,372,0,0" Click="button_click" />
-        <Button x:Name="Plus_btn" Content="+" Margin="265,236,0,0" Click="Operator_Click" />
-        <Button x:Name="Minus_btn" Content="-" Margin="265,281,0,0" Click="Operator_Click" />
-        <Button x:Name="Multiply_btn" Content="*" Margin="265,326,0,0" Click="Operator_Click" />
-        <Button x:Name="Divide_btn" Content="/" Margin="265,372,0,0" Click="Operator_Click" /> 
-        <Button x:Name="Solution_btn" Content="=" Margin="180,372,0,0" Click="Equals_Click" />
-        <Button x:Name="Point_btn" Content="." Margin="10,372,0,0" Click="button_click" />
-        <Button x:Name="Delete_btn" Content="Delete" Margin="350,282,0,0" Click="Delete_btn_Click" />
-        <Button x:Name="Delete_btn_Copy" Content="Last" Margin="350,236,0,0" Click="Remove_Last_Click" />
+        <Button x:Name="One_btn" Content="1" Margin="10,327,0,0" Command="{Binding ValueButtonCommand}" CommandParameter="{Binding ElementName=One_btn, Path=Content}"/>
+        <Button x:Name="Two_btn" Content="2"  Margin="95,327,0,0" Command="{Binding ValueButtonCommand}" CommandParameter="{Binding ElementName=Two_btn, Path=Content}"/>
+        <Button x:Name="Three_btn" Content="3" Margin="180,326,0,0" Command="{Binding ValueButtonCommand}" CommandParameter="{Binding ElementName=Three_btn, Path=Content}"/>
+        <Button x:Name="Four_btn" Content="4"  Margin="10,282,0,0" Command="{Binding ValueButtonCommand}" CommandParameter="{Binding ElementName=Four_btn, Path=Content}" />
+        <Button x:Name="Five_btn" Content="5" Margin="95,282,0,0" Command="{Binding ValueButtonCommand}" CommandParameter="{Binding ElementName=Five_btn, Path=Content}" />
+        <Button x:Name="Six_btn" Content="6" Margin="180,281,0,0" Command="{Binding ValueButtonCommand}" CommandParameter="{Binding ElementName=Six_btn, Path=Content}" />
+        <Button x:Name="Seven_btn" Content="7" Margin="10,236,0,0" Command="{Binding ValueButtonCommand}" CommandParameter="{Binding ElementName=Seven_btn, Path=Content}" />
+        <Button x:Name="Eight_btn" Content="8" Margin="95,236,0,0" Command="{Binding ValueButtonCommand}" CommandParameter="{Binding ElementName=Eight_btn, Path=Content}" />
+        <Button x:Name="Nine_btn" Content="9" Margin="180,236,0,0" Command="{Binding ValueButtonCommand}" CommandParameter="{Binding ElementName=Nine_btn, Path=Content}" />
+        <Button x:Name="Zero_btn" Content="0" Margin="95,372,0,0" Command="{Binding ValueButtonCommand}" CommandParameter="{Binding ElementName=Zero_btn, Path=Content}" />
+        <Button x:Name="Plus_btn" Content="+" Margin="265,236,0,0" Command="{Binding OperatorButtonCommand}" CommandParameter="{Binding ElementName=Plus_btn, Path=Content}" />
+        <Button x:Name="Minus_btn" Content="-" Margin="265,281,0,0" Command="{Binding OperatorButtonCommand}" CommandParameter="{Binding ElementName=Minus_btn, Path=Content}" />
+        <Button x:Name="Multiply_btn" Content="*" Margin="265,326,0,0" Command="{Binding OperatorButtonCommand}" CommandParameter="{Binding ElementName=Multiply_btn, Path=Content}" />
+        <Button x:Name="Divide_btn" Content="/" Margin="265,372,0,0" Command="{Binding OperatorButtonCommand}" CommandParameter="{Binding ElementName=Divide_btn, Path=Content}" />
+        <Button x:Name="Solution_btn" Content="=" Margin="180,372,0,0" Command="{Binding  EqaulsButtonCommand}"/>
+        <Button x:Name="Point_btn" Content="." Margin="10,372,0,0" Command="{Binding ClickOperatorButton}" CommandParameter="{Binding ElementName=Point_btn, Path=Content}" />
+        <Button x:Name="Delete_btn" Content="Delete" Margin="350,282,0,0" Command="{Binding DeleteButtonCommand}"/>
+        <Button x:Name="Delete_btn_Copy" Content="Last" Margin="350,236,0,0" Command="{Binding LastButtonCommand}"/>
         <!-- Textbox -->
-        <TextBox x:Name="Input_txt" HorizontalAlignment="Left" Margin="10,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="420" Height="40"/>
-        <TextBox x:Name="FullInput_txt" HorizontalAlignment="Left" Height="40" Margin="10,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="420"/>
+        <TextBox x:Name="Input_txt" HorizontalAlignment="Left" Margin="10,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="420" Height="40" Text="{Binding InputText}"/>
+        <TextBox x:Name="FullInput_txt" HorizontalAlignment="Left" Height="40" Margin="10,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="420" Text="{Binding FullText}"/>
 
 
 

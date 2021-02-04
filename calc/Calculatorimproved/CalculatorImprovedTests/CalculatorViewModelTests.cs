@@ -85,32 +85,78 @@ namespace CalculatorImprovedTests
             Assert.NotEqual("5 +", result);
         }
         [Fact]
-        public void CalculatorVM_RemoveLastChar_Eqauls()
+        public void CalculatorVM_ClickLastButton_Eqauls()
         {
             Calculatorimproved.CalculatorViewModel calculatorViewModel = new Calculatorimproved.CalculatorViewModel();
-            string result = calculatorViewModel.RemoveLastChar("3502");
-            Assert.Equal("350", result);
+            calculatorViewModel.InputText = "33002";
+            object parameter = 0;
+            calculatorViewModel.ClickLastButton(parameter);
+            Assert.Equal("3300", calculatorViewModel.InputText);
+        }      
+        [Fact]
+        public void CalculatorVM_ClickLastButton_NotEqauls()
+        {
+            Calculatorimproved.CalculatorViewModel calculatorViewModel = new Calculatorimproved.CalculatorViewModel();
+            calculatorViewModel.InputText = "33002";
+            object parameter = 0;
+            calculatorViewModel.ClickLastButton(parameter);
+            Assert.NotEqual("330", calculatorViewModel.InputText);
+        }     
+        [Fact]
+        public void CalculatorVM_ClickDeleteButton_Eqauls()
+        {
+            Calculatorimproved.CalculatorViewModel calculatorViewModel = new Calculatorimproved.CalculatorViewModel();
+            calculatorViewModel.InputText = "5";
+            calculatorViewModel.FullText = "1+2+4";
+            object parameter = 0;
+            calculatorViewModel.ClickDeleteButton(parameter);
+            Assert.Equal("0", calculatorViewModel.InputText);
+            Assert.Equal("", calculatorViewModel.FullText);
         }
         [Fact]
-        public void CalculatorVM_RemoveLastChar_NotEqauls()
+        public void CalculatorVM_ClickDeleteDelete_NotEqauls()
         {
             Calculatorimproved.CalculatorViewModel calculatorViewModel = new Calculatorimproved.CalculatorViewModel();
-            string result = calculatorViewModel.RemoveLastChar("35024");
-            Assert.NotEqual("350", result);
+            object parameter = 0;
+            calculatorViewModel.InputText = "5";
+            calculatorViewModel.FullText = "1+2+4";
+            calculatorViewModel.ClickDeleteButton(parameter);
+            Assert.NotEqual("", calculatorViewModel.InputText);
+            Assert.NotEqual("0", calculatorViewModel.FullText);
         }
         [Fact]
-        public void CalculatorVM_Delete_Eqauls()
+        public void CalculatorVM_ClickValueButton_Eqauls()
         {
             Calculatorimproved.CalculatorViewModel calculatorViewModel = new Calculatorimproved.CalculatorViewModel();
-            string result = calculatorViewModel.Delete();
-            Assert.Equal("0", result);
+            object parameter = 5;
+            calculatorViewModel.ClickValueButton(parameter);
+            Assert.Equal("5", calculatorViewModel.InputText);
         }
         [Fact]
-        public void CalculatorVM_Delete_NotEqauls()
+        public void CalculatorVM_ClickValueButton_NotEqauls()
         {
             Calculatorimproved.CalculatorViewModel calculatorViewModel = new Calculatorimproved.CalculatorViewModel();
-            string result = calculatorViewModel.Delete();
-            Assert.NotEqual("", result);
+            object parameter = 5;
+            calculatorViewModel.ClickValueButton(parameter);
+            Assert.NotEqual("6", calculatorViewModel.InputText);
+        }
+        [Fact]
+        public void CalculatorVM_ClickOperatorButton_Eqauls()
+        {
+            Calculatorimproved.CalculatorViewModel calculatorViewModel = new Calculatorimproved.CalculatorViewModel();
+            object parameter = "+";
+            calculatorViewModel.InputText = "5";
+            calculatorViewModel.ClickOperatorButton(parameter);
+            Assert.Equal("5 +", calculatorViewModel.FullText);
+        }
+        [Fact]
+        public void CalculatorVM_ClickOperatorButton_NotEqauls()
+        {
+            Calculatorimproved.CalculatorViewModel calculatorViewModel = new Calculatorimproved.CalculatorViewModel();
+            object parameter = "+";
+            calculatorViewModel.InputText = "5";
+            calculatorViewModel.ClickOperatorButton(parameter);
+            Assert.NotEqual("5 /", calculatorViewModel.FullText);
         }
     }
 }
