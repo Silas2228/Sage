@@ -158,5 +158,16 @@ namespace CalculatorImprovedTests
             calculatorViewModel.ClickOperatorButton(parameter);
             Assert.NotEqual("5 /", calculatorViewModel.FullText);
         }
+        [Fact]
+        public void CalculatorVM_ClickEqaulsButton_Eqauls()
+        {
+            Calculatorimproved.CalculatorViewModel calculatorViewModel = new Calculatorimproved.CalculatorViewModel();
+            object parameter = 0;
+            calculatorViewModel.InputText = "5";
+            calculatorViewModel.Get("*", 5);
+            calculatorViewModel.ClickEqaulsButton(parameter);
+            Assert.Equal("25", calculatorViewModel.InputText);
+            Assert.Equal("", calculatorViewModel.FullText);
+        }
     }
 }

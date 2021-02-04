@@ -64,7 +64,7 @@ namespace Calculatorimproved
             InputText += parameter;
         }
 
-        private void ClickEqaulsButton(object parameter)
+        public void ClickEqaulsButton(object parameter)
         {
             InputText = Calc(InputText);
             FullText = "";
