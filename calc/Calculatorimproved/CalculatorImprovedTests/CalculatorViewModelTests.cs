@@ -177,7 +177,36 @@ namespace CalculatorImprovedTests
             string result = calculatorViewModel.Calc(null);
             Assert.Equal("0", result);
         }
-
-        //null tests noch machen!!!
+        [Fact]
+        public void CalculatorVM_CalcRemoveWithNull_Equals()
+        {
+            Calculatorimproved.CalculatorViewModel calculatorViewModel = new Calculatorimproved.CalculatorViewModel();
+            calculatorViewModel.Get("-", 5);
+            string result = calculatorViewModel.Calc(null);
+            Assert.Equal("0", result);
+        }
+        [Fact]
+        public void CalculatorVM_CalcMultiplyWithNull_Eqauls()
+        {
+            Calculatorimproved.CalculatorViewModel calculatorViewModel = new Calculatorimproved.CalculatorViewModel();
+            calculatorViewModel.Get("*", 5);
+            string result = calculatorViewModel.Calc(null);
+            Assert.Equal("0", result);
+        }
+        [Fact]
+        public void CalculatorVM_CalcdivisionWithNull_Equals()
+        {
+            Calculatorimproved.CalculatorViewModel calculatorViewModel = new Calculatorimproved.CalculatorViewModel();
+            calculatorViewModel.Get("/", 10);
+            string result = calculatorViewModel.Calc(null);
+            Assert.Equal("0", result);
+        }
+        [Fact]
+        public void CalculatorVM_GetWithNull_Eqauls()
+        {
+            Calculatorimproved.CalculatorViewModel calculatorViewModel = new Calculatorimproved.CalculatorViewModel();
+            string result = calculatorViewModel.Get(null, 5);
+            Assert.Equal("0", result);
+        }
     }
 }
