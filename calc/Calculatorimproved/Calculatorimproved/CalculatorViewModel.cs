@@ -12,8 +12,8 @@ namespace Calculatorimproved
 {
     public class CalculatorViewModel : INotifyPropertyChanged
     {
-        internal bool operationp = false;
-        private string result;
+        internal bool _operationp = false;
+        private string _result = "0";
         private string _operators = "";
         private double _value = 0;
         private string _fullinput;
@@ -39,7 +39,7 @@ namespace Calculatorimproved
             string[] operators = new string[4] { "+", "-", "*", "/" };
             if(operators.Contains(parameter.ToString()))
             {
-                operationp = true;
+                _operationp = true;
                 FullText += Get(parameter.ToString(), Convert.ToDouble(InputText));
             }
             else
@@ -56,11 +56,11 @@ namespace Calculatorimproved
             {
                 return;
             }
-            if (InputText == "0" || operationp == true)
+            if (InputText == "0" || _operationp == true)
             {
                 InputText = "";
             }
-            operationp = false;
+            _operationp = false;
             InputText += parameter;
         }
 
@@ -129,24 +129,29 @@ namespace Calculatorimproved
 
         public string Calc(string value2)
         {
+            if(string.IsNullOrEmpty(value2))
+            {
+                return _result;
+            }
+
             switch (_operators)
             {
                 case "+":
-                    result = (_value + double.Parse(value2)).ToString();
+                    _result = (_value + double.Parse(value2)).ToString();
                     break;
                 case "-":
-                    result = (_value - double.Parse(value2)).ToString();
+                    _result = (_value - double.Parse(value2)).ToString();
                     break;
                 case "/":
-                    result = (_value / double.Parse(value2)).ToString();
+                    _result = (_value / double.Parse(value2)).ToString();
                     break;
                 case "*":
-                    result = (_value * double.Parse(value2)).ToString();
+                    _result = (_value * double.Parse(value2)).ToString();
                     break;
                 default:
                     break;
             }
-            return result;
+            return _result;
         }
 
         protected void RaisePropertyChanged([CallerMemberName] string name = "")

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculatorimproved"
         mc:Ignorable="d"
-        Title="Calculator" Height="332.609" Width="429.578" MinHeight="332.609" MaxHeight="332.609" MinWidth="429.578" MaxWidth="429.578" >
+        Title="Calculator" Height="332.609" Width="429.578" MinHeight="332.609" MaxHeight="332.609" MinWidth="429.578" MaxWidth="429.578" Icon="CalculatorIcon.png" >
 
     <Grid Background="#181818" Margin="0,0,0,-21">
         <Grid.RowDefinitions>
@@ -24,13 +24,13 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <!-- Textbox -->
-        <TextBox x:Name="Input_txt" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding InputText}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" HorizontalAlignment="Stretch" Height="60" IsReadOnly="True" BorderThickness="3"/>
-        <TextBox x:Name="FullInput_txt" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding FullText}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="5" HorizontalAlignment="Stretch" Height="60" IsReadOnly="True" BorderThickness="3"/>
+        <TextBox x:Name="txtResultat" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding InputText}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" HorizontalAlignment="Stretch" Height="60" IsReadOnly="True" BorderThickness="3"/>
+        <TextBox x:Name="txtInput" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding FullText}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="5" HorizontalAlignment="Stretch" Height="60" IsReadOnly="True" BorderThickness="3"/>
         <!--.Button Numbers -->
-        <Button x:Name="One_btn" Content="1" Command="{Binding ValueButtonCommand}" CommandParameter="{Binding ElementName=One_btn, Path=Content}" VerticalAlignment="Bottom" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"/>
-        <Button x:Name="Two_btn" Content="2" Command="{Binding ValueButtonCommand}" CommandParameter="{Binding ElementName=Two_btn, Path=Content}" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2"/>
-        <Button x:Name="Three_btn" Content="3" Command="{Binding ValueButtonCommand}" CommandParameter="{Binding ElementName=Three_btn, Path=Content}" VerticalAlignment="Bottom"  Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="2"/>
-        <Button x:Name="Four_btn" Content="4" Command="{Binding ValueButtonCommand}" CommandParameter="{Binding ElementName=Four_btn, Path=Content}" VerticalAlignment="Bottom"  Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnOne" Content="1" Command="{Binding ValueButtonCommand}" CommandParameter="{Binding ElementName=One_btn, Path=Content}" VerticalAlignment="Bottom" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnTwo" Content="2" Command="{Binding ValueButtonCommand}" CommandParameter="{Binding ElementName=Two_btn, Path=Content}" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnThree" Content="3" Command="{Binding ValueButtonCommand}" CommandParameter="{Binding ElementName=Three_btn, Path=Content}" VerticalAlignment="Bottom"  Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnFour" Content="4" Command="{Binding ValueButtonCommand}" CommandParameter="{Binding ElementName=Four_btn, Path=Content}" VerticalAlignment="Bottom"  Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2"/>
         <Button x:Name="Five_btn" Content="5" Command="{Binding ValueButtonCommand}" CommandParameter="{Binding ElementName=Five_btn, Path=Content}" VerticalAlignment="Bottom"  Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" />
         <Button x:Name="Six_btn" Content="6" Command="{Binding ValueButtonCommand}" CommandParameter="{Binding ElementName=Six_btn, Path=Content}" VerticalAlignment="Bottom"  Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2"/>
         <Button x:Name="Seven_btn" Content="7" Command="{Binding ValueButtonCommand}" CommandParameter="{Binding ElementName=Seven_btn, Path=Content}" VerticalAlignment="Bottom" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"/>
@@ -45,8 +45,6 @@
         <!-- Other Buttons -->
         <Button x:Name="Solution_btn" Content="="  Command="{Binding  EqaulsButtonCommand}" VerticalAlignment="Bottom" Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2"/>
         <Button x:Name="Point_btn" Content="." Command="{Binding ClickOperatorButton}" CommandParameter="{Binding ElementName=Point_btn, Path=Content}" VerticalAlignment="Bottom" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" />
-        
-            
         <Button x:Name="Delete_btn" Content="Delete" Command="{Binding DeleteButtonCommand}" VerticalAlignment="Bottom" Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="2"/>
         <Button x:Name="Delete_btn_Copy" Content="Last" Command="{Binding LastButtonCommand}" VerticalAlignment="Bottom" Grid.Column="4" Grid.Row="3" Grid.ColumnSpan="2"/>
     </Grid>

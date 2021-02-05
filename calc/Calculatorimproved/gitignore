@@ -1,0 +1,33 @@
+# IDE
+**/.vscode
+**/.idea
+**/*.yml
+
+# Dependencies
+**/node_modules
+
+# Binaries
+**bin
+**dist
+
+# Misc
+**/.DS_Store
+**.env*
+
+# Logs
+**.log*
+
+# Local
+**/config-local.js
+
+# TypeScript
+src/**/*.js
+src/**/*.js.map
+
+# Certificates
+**/*.crt
+**/*.key
+**/*.pem
+
+# Visual studio
+.vs/

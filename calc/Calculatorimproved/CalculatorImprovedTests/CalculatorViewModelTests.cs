@@ -169,5 +169,15 @@ namespace CalculatorImprovedTests
             Assert.Equal("25", calculatorViewModel.InputText);
             Assert.Equal("", calculatorViewModel.FullText);
         }
+        [Fact]
+        public void CalculatorVM_CalcAddWithNull_Equals()
+        {
+            Calculatorimproved.CalculatorViewModel calculatorViewModel = new Calculatorimproved.CalculatorViewModel();
+            calculatorViewModel.Get("+", 5);
+            string result = calculatorViewModel.Calc(null);
+            Assert.Equal("0", result);
+        }
+
+        //null tests noch machen!!!
     }
 }

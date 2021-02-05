@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("wpfcalculator.xaml.cpp")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("calculatoricon.png")]
 
 

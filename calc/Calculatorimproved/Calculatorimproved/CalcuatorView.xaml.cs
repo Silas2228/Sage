@@ -23,6 +23,8 @@ namespace Calculatorimproved
             InitializeComponent();
             _calculatorViewModel = new CalculatorViewModel();
             DataContext = _calculatorViewModel;
+            
         }
+
     }
 }

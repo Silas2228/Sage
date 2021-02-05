@@ -5,7 +5,12 @@ VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculatorimproved", "Calculatorimproved\Calculatorimproved.csproj", "{4AA3EEB9-BCEB-48F7-A62D-3EF2DCB6128D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorImprovedTests", "CalculatorImprovedTests\CalculatorImprovedTests.csproj", "{F5C3D01F-FD0C-48CE-BA01-6D0FD9AD21D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculatorImprovedTests", "CalculatorImprovedTests\CalculatorImprovedTests.csproj", "{F5C3D01F-FD0C-48CE-BA01-6D0FD9AD21D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9533BE37-B3E2-4949-A41A-797478D1A373}"
+	ProjectSection(SolutionItems) = preProject
+		gitignore = gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
