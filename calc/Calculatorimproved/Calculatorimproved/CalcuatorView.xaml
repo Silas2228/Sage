@@ -45,7 +45,7 @@
         <!-- Other Buttons -->
         <Button x:Name="Solution_btn" Content="="  Command="{Binding  EqaulsButtonCommand}" VerticalAlignment="Bottom" Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2"/>
         <Button x:Name="Point_btn" Content="." Command="{Binding ClickOperatorButton}" CommandParameter="{Binding ElementName=Point_btn, Path=Content}" VerticalAlignment="Bottom" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" />
-        <Button x:Name="Delete_btn" Content="Delete" Command="{Binding DeleteButtonCommand}" VerticalAlignment="Bottom" Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <Button x:Name="Delete_btn" Content="Delete1" Command="{Binding DeleteButtonCommand}" VerticalAlignment="Bottom" Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="2"/>
         <Button x:Name="Delete_btn_Copy" Content="Last" Command="{Binding LastButtonCommand}" VerticalAlignment="Bottom" Grid.Column="4" Grid.Row="3" Grid.ColumnSpan="2"/>
     </Grid>
 
