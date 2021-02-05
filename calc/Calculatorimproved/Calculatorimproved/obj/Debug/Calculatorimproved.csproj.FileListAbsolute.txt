@@ -1,0 +1,15 @@
+C:\git\SageProjects\Sage\calc\Calculatorimproved\Calculatorimproved\bin\Debug\Calculatorimproved.exe.config
+C:\git\SageProjects\Sage\calc\Calculatorimproved\Calculatorimproved\bin\Debug\Calculatorimproved.exe
+C:\git\SageProjects\Sage\calc\Calculatorimproved\Calculatorimproved\bin\Debug\Calculatorimproved.pdb
+C:\git\SageProjects\Sage\calc\Calculatorimproved\Calculatorimproved\obj\Debug\Calculatorimproved.csprojAssemblyReference.cache
+C:\git\SageProjects\Sage\calc\Calculatorimproved\Calculatorimproved\obj\Debug\CalcuatorView.g.cs
+C:\git\SageProjects\Sage\calc\Calculatorimproved\Calculatorimproved\obj\Debug\App.g.cs
+C:\git\SageProjects\Sage\calc\Calculatorimproved\Calculatorimproved\obj\Debug\Calculatorimproved_MarkupCompile.cache
+C:\git\SageProjects\Sage\calc\Calculatorimproved\Calculatorimproved\obj\Debug\Calculatorimproved_MarkupCompile.lref
+C:\git\SageProjects\Sage\calc\Calculatorimproved\Calculatorimproved\obj\Debug\CalcuatorView.baml
+C:\git\SageProjects\Sage\calc\Calculatorimproved\Calculatorimproved\obj\Debug\Calculatorimproved.g.resources
+C:\git\SageProjects\Sage\calc\Calculatorimproved\Calculatorimproved\obj\Debug\Calculatorimproved.Properties.Resources.resources
+C:\git\SageProjects\Sage\calc\Calculatorimproved\Calculatorimproved\obj\Debug\Calculatorimproved.csproj.GenerateResource.cache
+C:\git\SageProjects\Sage\calc\Calculatorimproved\Calculatorimproved\obj\Debug\Calculatorimproved.csproj.CoreCompileInputs.cache
+C:\git\SageProjects\Sage\calc\Calculatorimproved\Calculatorimproved\obj\Debug\Calculatorimproved.exe
+C:\git\SageProjects\Sage\calc\Calculatorimproved\Calculatorimproved\obj\Debug\Calculatorimproved.pdb

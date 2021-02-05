@@ -16,7 +16,7 @@ namespace Calculatorimproved
         private string _result = "0";
         private string _operators = "";
         private double _value = 0;
-        private string _fullinput = "0";
+        private string _fullinput = "";
         private string _inputText = "0";
         private string _fullText;
         private readonly RelayCommand _valueButtonCommand;
@@ -50,7 +50,7 @@ namespace Calculatorimproved
         }
         public void ClickValueButton(object parameter)
         {
-            int value;
+            int value = 0;
             bool isnumeric = int.TryParse(parameter.ToString(),out value);
             if(isnumeric == false)
             {
@@ -121,7 +121,7 @@ namespace Calculatorimproved
 
         public string Get(string operation, double value)
         {
-            if(string.IsNullOrEmpty(operation))
+            if (string.IsNullOrEmpty(operation))
             {
                 return _fullinput;
             }
