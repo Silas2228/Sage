@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Calculatorimproved"
         mc:Ignorable="d"
         Title="Calculator" Height="332.609" Width="429.578" MinHeight="332.609" MaxHeight="332.609" MinWidth="429.578" MaxWidth="429.578" Icon="CalculatorIcon.png" >
-
+ 
     <Grid Background="#181818" Margin="0,0,0,-21">
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
